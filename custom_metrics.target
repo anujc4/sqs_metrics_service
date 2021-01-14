@@ -1,3 +1,0 @@
-[Unit]
-Description=Custom Metrics Service Target
-StopWhenUnneeded=no

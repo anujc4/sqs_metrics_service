@@ -1,10 +1,11 @@
 [Unit]
 Description=Minute Timer
+Requires=custom_metrics.service
 
 [Timer]
 OnBootSec=1min
 OnCalendar=*:0/1
-Unit=custom_metrics.target
+Unit=custom_metrics.service
 
 [Install]
-WantedBy=custom_metrics.target
+WantedBy=timers.target

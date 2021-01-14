@@ -1,3 +1,4 @@
+import datetime
 import boto3
 
 QUEUE_NAME = "wordfreq-jobs"
@@ -47,3 +48,5 @@ cw_client.put_metric_data(
         }
     ]
 )
+
+print(datetime.datetime.now(), ">", backlog_per_instance)
