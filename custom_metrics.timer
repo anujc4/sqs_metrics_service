@@ -2,7 +2,7 @@
 Description=Minute Timer
 
 [Timer]
-OnBootSec=5min
+OnBootSec=1min
 OnCalendar=*:0/1
 Unit=custom_metrics.target
 
