@@ -1,0 +1,15 @@
+{
+  "TargetValue":20,
+  "CustomizedMetricSpecification":{
+     "MetricName":"BacklogPerInstance",
+     "Namespace":"SQSCustomMetric",
+     "Dimensions":[
+        {
+           "Name":"AutoScaleGroup",
+           "Value":"wordfreq-dev-asg"
+        }
+     ],
+     "Statistic":"Average",
+     "Unit":"None"
+  }
+}

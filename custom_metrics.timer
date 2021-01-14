@@ -1,0 +1,10 @@
+[Unit]
+Description=Minute Timer
+
+[Timer]
+OnBootSec=5min
+OnCalendar=*:0/1
+Unit=custom_metrics.target
+
+[Install]
+WantedBy=custom_metrics.target

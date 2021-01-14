@@ -1,0 +1,22 @@
+[Unit]
+Description=Custom metrics push service to CloudWatch
+ConditionPathExists=/home/ubuntu/metrics_service/push.py
+After=network.target
+Wants=custom_metrics.timer
+
+[Service]
+User=metricsservice
+Group=metricsservice
+WorkingDirectory=/home/ubuntu/metrics_service
+ExecStart=/home/ubuntu/metrics_service/env/bin/python /home/ubuntu/metrics_service/push.py
+PermissionsStartOnly=true
+Environment=AWS_DEFAULT_REGION=us-east-1
+ExecStartPre=/bin/mkdir -p /var/log/wordfreqservice
+ExecStartPre=/bin/chown syslog:adm /var/log/wordfreqservice
+ExecStartPre=/bin/chmod 755 /var/log/wordfreqservice
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=metricsservice
+
+[Install]
+WantedBy=custom_metrics.target
