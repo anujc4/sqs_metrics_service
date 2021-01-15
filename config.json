@@ -1,5 +1,5 @@
 {
-  "TargetValue":20,
+  "TargetValue":2,
   "CustomizedMetricSpecification":{
      "MetricName":"BacklogPerInstance",
      "Namespace":"SQSCustomMetric",
