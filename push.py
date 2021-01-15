@@ -33,7 +33,7 @@ in_service_instances = len([i for i in asg_instances if i['LifecycleState'] == '
 if in_service_instances != 0:
     backlog_per_instance = number_of_messages / in_service_instances
 else:
-    backlog_per_instance = 0
+    backlog_per_instance = number_of_messages
 
 # Push the metric to Cloudwatch
 # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_data
