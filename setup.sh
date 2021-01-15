@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo useradd metricsservice -s /sbin/nologin -M >/dev/null 2>&1
-
 sudo rm /lib/systemd/system/service.service
 sudo rm /lib/systemd/system/timer.timer
 
